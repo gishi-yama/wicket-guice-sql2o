@@ -47,6 +47,9 @@
 		<hikaricp.version>2.3.8</hikaricp.version>
 		<h2db.version>1.4.187</h2db.version>
 		<sql2o.version>1.5.4</sql2o.version>
+		<wicket.webjars.version>0.5.2</wicket.webjars.version>
+		<jquery.version>2.1.4</jquery.version>
+		<bootstrap.version>3.3.5</bootstrap.version>
 		<jetty9.version>9.2.11.v20150529</jetty9.version>
 		<junit.version>4.12</junit.version>
 		<mockito.version>1.10.19</mockito.version>
@@ -104,6 +107,23 @@
 			<groupId>org.sql2o</groupId>
 			<artifactId>sql2o</artifactId>
 			<version>${sql2o.version}</version>
+		</dependency>
+
+		<!-- Webjars Dependencies -->
+		<dependency>
+			<groupId>de.agilecoders.wicket.webjars</groupId>
+			<artifactId>wicket-webjars</artifactId>
+			<version>${wicket.webjars.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>${jquery.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>${bootstrap.version}</version>
 		</dependency>
 
 		<!-- JUNIT DEPENDENCY FOR TESTING -->
@@ -205,6 +225,7 @@
 						</systemProperty>
 					</systemProperties>
 					<jettyXml>${project.basedir}/src/test/jetty/jetty.xml,${project.basedir}/src/test/jetty/jetty-ssl.xml,${project.basedir}/src/test/jetty/jetty-http.xml,${project.basedir}/src/test/jetty/jetty-https.xml</jettyXml>
+					<scanIntervalSeconds>3</scanIntervalSeconds>
 				</configuration>
 			</plugin>
 			<plugin>
