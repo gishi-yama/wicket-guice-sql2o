@@ -4,7 +4,7 @@
 	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
 		<Target>System.out</Target>
 		<encoder>
-			<Pattern>gakkai %d{MM/dd HH:mm:ss.SSS} %t %-5p %c{64} - %m%n
+			<Pattern>%d{MM/dd HH:mm:ss.SSS} %t %-5p %c{64} - %m%n
 			</Pattern>
 		</encoder>
 	</appender>
@@ -31,7 +31,7 @@
 	</logger>
 
 	<!-- root -->
-	<root level="INFO">
+	<root level="info">
 		<appender-ref ref="stdout" />
 	</root>
 

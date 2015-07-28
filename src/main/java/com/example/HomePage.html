@@ -2,13 +2,22 @@
 <html xmlns:wicket="http://wicket.apache.org">
 <head>
 <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body style="margin-height:50px">
-	<div class="container">
-		<h1>Bootstrap starter template</h1>
-		<p class="lead">
-			Hello, Apache Wicket <span wicket:id="version"></span>
-		</p>
-	</div>
+<body style="margin-top: 50px;">
+  <div class="container">
+    <div wicket:id="feedback"></div>
+    <form wicket:id="form">
+      <div class="form-group">
+        <label>名前</label> <input type="text" class="form-control" wicket:id="form_name" />
+      </div>
+      <div class="form-group">
+        <label>番号</label> <input type="text" class="form-control" wicket:id="index" />
+      </div>
+      <button type="submit" class="btn btn-primary">送信</button>
+    </form>
+    <h1 wicket:id="name"></h1>
+  </div>
 </body>
 </html>
